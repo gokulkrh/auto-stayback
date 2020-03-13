@@ -67,3 +67,4 @@ for i in present:
     submit = (By.ID, "stayback_normal_save") # clicks on the submit button
     WebDriverWait(browser, 10).until(EC.element_to_be_clickable(submit)).click()
 
+    browser.__exit__() # exits the browser once the application is submitted
