@@ -1,3 +1,4 @@
+from pyvirtualdisplay import Display
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium import webdriver
@@ -26,6 +27,9 @@ for i in present:
     next = (By.ID, "idSIButton9")
     button = (By.ID, "idSIButton9")
     signin = (By.NAME, "login")
+
+    display = Display(visible=0, size=(800, 600)) # hides the browser (runs the process in the background)
+    display.start()
 
     browser = webdriver.Chrome()
     browser.get('https://my.amrita.ac.in/index/index') # opens my amrita homepage
